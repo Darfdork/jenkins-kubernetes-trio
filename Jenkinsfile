@@ -8,7 +8,7 @@ pipeline {
         stage('Create Secret & DB') {
             steps {
                 sh "sed -e  's,{{PASSWORD}},'$DBPASSWD' ,g;' -e 's,{{DATABASE}},'$DBNAME',g;' secret.yaml"
-                sh "kubectl apply -f secret.yaml"
+            
 
 
             }
