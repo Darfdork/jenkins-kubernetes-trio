@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Create Secret & DB') {
             steps {
-                sh "sed -e  's,{{PASSWORD}},bighairycheese ,g;' -e 's,{{DATABASE}},limpbizkit,g;' secrets.yaml"
+                sh "sed -e  's,{{PASSWORD}},bighairycheese ,g;' -e 's,{{DATABASE}},limpbizkit,g;' secret.yaml"
                 sh "kubectl apply -f secret.yaml"
 
 
